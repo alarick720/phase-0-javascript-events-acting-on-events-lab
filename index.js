@@ -4,18 +4,21 @@ document.addEventListener("keydown", function (e) {
       moveDodgerLeft();
     }
   });
-    function moveDodgerLeft() {
-    const leftNumbers = dodger.style.left.replace("px", "");
+  function moveDodgerLeft() {
+    const leftNumbers = dodger.style.left.replace('px', '');
     const left = parseInt(leftNumbers, 10);
   
     if (left > 0) {
       dodger.style.left = `${left - 1}px`;
     }
-  };function moveDodgerRight() {
-    const RightNumbers = dodger.style.left.replace("px", "");
-    const left = parseInt(RightNumbers, 10);
+  }   
+    
+  function moveDodgerRight() {
+    const dodger = document.getElementById('dodger'); 
+    const leftNumbers = dodger.style.left.replace('px', '');
+    const left = parseInt(leftNumbers, 10);
   
-    if (left> 0) {
+    if (left < 360) { 
       dodger.style.left = `${left + 1}px`;
     }
   }
